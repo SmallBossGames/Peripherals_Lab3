@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.С2TextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Chart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,11 +182,22 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Ёмкость конденсатора 2";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(15, 236);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Преобразовать2";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ConvertButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.AnalogTextBox);
@@ -224,6 +236,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox С2TextBox;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }
 

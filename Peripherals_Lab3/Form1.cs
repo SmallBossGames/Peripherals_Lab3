@@ -53,5 +53,30 @@ namespace Peripherals_Lab3
                 Chart.Series[1].Points.Add(target);
             }
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var value = byte.Parse(E0TextBox.Text);
+                var c1 = double.Parse(С1TextBox.Text);
+                var c2 = double.Parse(С2TextBox.Text);
+                var e0 = double.Parse(E0TextBox.Text);
+
+                var resultArray = DAC.ConvertToAnalogTup(c1, c2, e0);
+
+                SourceBinTextBox.Text = Convert.ToString(value, 2);
+                DrawChart(resultArray, value);
+                AnalogTextBox.Text = resultArray[resultArray.Length - 1].ToString();
+            }
+            catch (FormatException e1)
+            {
+                MessageBox.Show(e1.Message);
+            }
+            catch (OverflowException e1)
+            {
+                MessageBox.Show(e1.Message);
+            }
+        }
     }
 }
